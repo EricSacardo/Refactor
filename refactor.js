@@ -1,27 +1,25 @@
-function returnRandomNumber() {
-  return Math.random();
+function Operations(numero, op) {
+  const number = Math.round(Math.random() * 100);
+  const sum = number + numero; 
+  const sub = number - numero;
+  const mul = number * numero;
+  const div = number / numero;
+  console.log("Numero gerado: "+ number +", Numero digitado: " + numero);
+ switch(op){
+    case 1: 
+      return "Resultado: " + {number+numero};
+      break;
+    case 2: 
+      return "Resultado: " +  sub;
+      break;
+    case 3: 
+      return "Resultado: " +  mul;
+      break;
+    case 4: 
+      return "Resultado: " +  div;
+      break;
+ }
+
 }
 
-function sumToRandomNumber(num) {
-  const numberToSum = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToSum * 100) + num}!`;
-}
-
-function subtractRandomNumber(num) {
-  const numberToSubtract = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToSubtract * 100) - num}!`;
-}
-
-function multiplyToRandomNumber(num) {
-  const numberToMultiply = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToMultiply * 100) * num}!`;
-}
-
-function divideRandomNumber(num) {
-  const numberToDivide = returnRandomNumber();
-
-  return `Seu número é ${Math.round(numberToDivide * 100) / num}!`;
-}
+console.log(Operations(10, 3));
